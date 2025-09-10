@@ -13,8 +13,9 @@ ratings.forEach((button) => {
 
 submitBtn.addEventListener("click", () => {
   if (selectedRating) {
-    window.location.href = `index${selectedRating}.html`;
-  } else {
-    alert("Please select a rating first!");
+    localStorage.setItem("rating", selectedRating);
+    window.location.href = `thankyou.html`;
   }
+  else
+    alert("Please select a rating first!");
 });
